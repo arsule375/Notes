@@ -1,0 +1,182 @@
+% Created 2021-11-27 Sat 19:55
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\author{Atharv Sule}
+\date{\today}
+\title{Demo2}
+\hypersetup{
+ pdfauthor={Atharv Sule},
+ pdftitle={Demo2},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.2 (Org mode 9.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{This is a  Toplevel Heading}
+\label{sec:org2feb7b4}
+
+Here's: \textbf{bold} \emph{italics} \uline{underline} \texttt{code}.
+
+\subsection{Subheading}
+\label{sec:org1b3f0cf}
+
+Numbered list:
+
+\begin{enumerate}
+\item First item
+\item Second item
+\begin{enumerate}
+\item Sublist
+\item Sublist item 2
+\begin{enumerate}
+\item Subsublist
+\end{enumerate}
+\end{enumerate}
+\item Some more items
+\end{enumerate}
+
+Bulleted lists:
+\begin{itemize}
+\item Bullet 1
+\item Bullet 2
+\begin{itemize}
+\item Subbullet
+\item Etc.
+\end{itemize}
+\end{itemize}
+
+Some text here
+
+\newpage
+
+\section{Another Toplevel Heading}
+\label{sec:orgbb2ab5b}
+Lets do some more advanced stuff
+
+\subsection{Code Blocks}
+\label{sec:org4c58c7a}
+
+\begin{minted}[]{python}
+print"Hello world"
+\end{minted}
+
+\begin{verbatim}
+Hello world
+\end{verbatim}
+
+
+
+
+Heres's some Java:
+
+To execute a code block do \texttt{C-c C-c}
+
+\begin{minted}[]{java}
+// your first program
+class Helloworld {
+    public static void main(String[] args){
+        System.out.println("Hello There!");
+    }
+}
+\end{minted}
+
+\begin{verbatim}
+Hello There!
+\end{verbatim}
+
+
+
+\begin{minted}[]{cpp}
+#include <stdio.h>
+
+int main(int argc, char *argv[]){
+  printf("Hello world");
+  return 0;
+}
+\end{minted}
+
+\begin{verbatim}
+Hello world
+\end{verbatim}
+
+
+
+\begin{minted}[]{common-lisp}
+(princ "Hello world ")
+\end{minted}
+
+\subsection{Tables}
+\label{sec:org83749d3}
+
+How to make table type | name | name | <tab> \texttt{C-c} <enter
+
+\begin{center}
+\begin{tabular}{ll}
+name & Ice Cream\\
+\hline
+Atharva & vanilla\\
+adi & Vanilla\\
+Rahul & Stawberry\\
+Vijay & none\\
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{ll}
+name & Car\\
+\hline
+Atharv & ferrari\\
+adi & laborgini\\
+dad & honda\\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ll}
+name & Home\\
+\hline
+Atharv & US\\
+\end{tabular}
+\end{center}
+
+
+\section{Basic Emacs}
+\label{sec:org6f7a6fb}
+\begin{itemize}
+\item \texttt{C-x C-f}: open a file (old or new doesn't matter)
+\item \texttt{C-x C-c}: exit Emacs (will ask for confimation, type ``y'')
+\item \texttt{C-x C-s}: save file
+\item \texttt{M-x org-latex-export-to-pdf}: generate PDF output for Org file.
+\item \texttt{M-w} copy \texttt{C-y} paste.
+\item \texttt{C-c C-l} Hyperlinks.
+\end{itemize}
+
+\section{Mathematics}
+\label{sec:org3f066e5}
+
+Hyperlinks:\href{https://nebhrajani-a.github.io/}{adi's website hi}
+
+Math equation:
+Example:
+$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
+
+\section{Org Mode Manuel}
+\label{sec:org2b34287}
+\href{https://orgmode.org/manual/}{Click here}
+\end{document}

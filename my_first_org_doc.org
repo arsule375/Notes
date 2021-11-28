@@ -1,0 +1,120 @@
+#+TITLE: Demo2
+#+OPTIONS: toc:nil
+
+* This is a  Toplevel Heading
+
+Here's: *bold* /italics/ _underline_ =code=.
+
+** Subheading
+
+Numbered list:
+
+1. First item
+2. Second item
+   1. Sublist
+   2. Sublist item 2
+      1. Subsublist
+3. Some more items
+# opt return
+Bulleted lists:
+- Bullet 1
+- Bullet 2
+  - Subbullet
+  - Etc.
+
+Some text here
+
+#+LATEX: \newpage
+
+* Another Toplevel Heading
+Lets do some more advanced stuff
+
+** Code Blocks
+
+#+begin_src python :results output :exports both :eval no-export
+print"Hello world"
+#+end_src
+
+#+RESULTS:
+: Hello world
+
+
+
+Heres's some Java:
+
+To execute a code block do =C-c C-c=
+
+#+begin_src java :exports both :eval no-export
+// your first program
+class Helloworld {
+    public static void main(String[] args){
+        System.out.println("Hello world!");
+    }
+}
+#+end_src
+
+#+RESULTS:
+: Hello world!
+
+
+#+begin_src cpp :exports both :eval no-export
+#include <stdio.h>
+
+int main(int argc, char *argv[]){
+  printf("Hello world");
+  return 0;
+}
+#+end_src
+
+#+RESULTS:
+: Hello world
+
+
+#+begin_src emacs-lisp :exponts both :eval no-export
+(princ "Hello world ")
+#+end_src
+
+#+RESULTS:
+: Hello world
+
+** Tables
+
+How to make table type | name | name | <tab> =C-c= <enter
+
+| name    | Ice Cream |
+|---------+-----------|
+| Atharva | vanilla   |
+| adi     | Vanilla   |
+| Rahul   | Stawberry |
+| Vijay   | none      |
+
+
+| name   | Car       |
+|--------+-----------|
+| Atharv | ferrari   |
+| adi    | laborgini |
+| dad    | honda     |
+
+| name   | Home |
+|--------+------|
+| Atharv | US   |
+
+
+* Basic Emacs
+- =C-x C-f=: open a file (old or new doesn't matter)
+- =C-x C-c=: exit Emacs (will ask for confimation, type "y")
+- =C-x C-s=: save file
+- =M-x org-latex-export-to-pdf=: generate PDF output for Org file.
+- =M-w= copy =C-y= paste.
+- =C-c C-l= Hyperlinks.
+
+* Mathematics
+
+Hyperlinks:[[https://nebhrajani-a.github.io/][adi's website hi]]
+
+Math equation:
+Example:
+$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
+
+* Org Mode Manuel
+[[https://orgmode.org/manual/][Click here]]

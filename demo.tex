@@ -1,0 +1,154 @@
+% Created 2021-11-27 Sat 00:45
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\author{Atharv Sule}
+\date{\today}
+\title{A Demonstration of Org-Mode}
+\hypersetup{
+ pdfauthor={Atharv Sule},
+ pdftitle={A Demonstration of Org-Mode},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.2 (Org mode 9.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{This is a Toplevel Heading}
+\label{sec:orgf375fe8}
+
+Here's: \textbf{bold} \emph{italics} \uline{underline} \texttt{code}.
+
+\subsection{Subheading}
+\label{sec:orga80302b}
+
+Numbered list:
+\begin{enumerate}
+\item First item.
+\item Second item.
+\begin{enumerate}
+\item Sublist
+\item Sublist item 2
+\begin{enumerate}
+\item Subsublist
+\end{enumerate}
+\end{enumerate}
+\item Some more items\ldots{}
+\end{enumerate}
+
+Bulleted list:
+\begin{itemize}
+\item Bullet 1
+\item Bullet 2
+\begin{itemize}
+\item Subbullet
+\item Etc.
+\end{itemize}
+\end{itemize}
+
+Some text here.
+
+\newpage
+
+\section{Another Toplevel Heading}
+\label{sec:org7522b87}
+Let's do some more advanced stuff.
+
+\subsection{Code Blocks}
+\label{sec:org0a61a14}
+\begin{minted}[]{python}
+print "Hello world"
+\end{minted}
+
+\begin{verbatim}
+Hello world
+\end{verbatim}
+
+
+Here's some Java:
+
+\begin{minted}[]{java}
+// Your First Program
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+    }
+}
+\end{minted}
+
+\begin{verbatim}
+Hello world!
+\end{verbatim}
+
+
+\begin{minted}[]{cpp}
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+  printf("Hello world!");
+  return 0;
+}
+\end{minted}
+
+\begin{verbatim}
+Hello world!
+\end{verbatim}
+
+
+\begin{minted}[]{common-lisp}
+(princ "Hello world")
+\end{minted}
+
+\begin{verbatim}
+Hello world
+\end{verbatim}
+
+\subsection{Tables}
+\label{sec:org6efc597}
+
+\begin{center}
+\begin{tabular}{ll}
+Name & Ice Cream\\
+\hline
+Aditya & Vanilla\\
+Atharv & Vanilla\\
+Rahul & Strawberry\\
+Vijay & None\\
+\end{tabular}
+\end{center}
+
+\section{Basic Emacs}
+\label{sec:orgf9d4aea}
+
+\begin{itemize}
+\item \texttt{C-x C-f}: open a file (old or new doesn't matter)
+\item \texttt{C-x C-c}: exit Emacs (will ask for confimation, type ``y'')
+\item \texttt{C-x C-s}: save file
+\item \texttt{M-x org-latex-export-to-pdf}: generate PDF output for Org file.
+\end{itemize}
+
+\section{Mathematics}
+\label{sec:org4e98726}
+
+Hyperlinks: \href{https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference}{refer here for how to type mathematics in Org mode}.
+
+Example:
+$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
+
+\section{Org Mode manual}
+\label{sec:org747ebaf}
+\href{https://orgmode.org/manual/}{Click here.}
+\end{document}

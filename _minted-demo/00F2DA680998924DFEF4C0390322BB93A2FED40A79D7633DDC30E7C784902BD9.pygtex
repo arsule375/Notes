@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nb}{print} \PYG{l+s+s2}{\PYGZdq{}Hello world\PYGZdq{}}
+\PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{10}
+\PYG{n}{b} \PYG{o}{=} \PYG{l+m+mi}{30}
+\PYG{n+nb}{print} \PYG{n}{a}\PYG{o}{*}\PYG{n}{b}
+\end{Verbatim}
