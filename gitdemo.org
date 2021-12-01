@@ -1,0 +1,9 @@
+#+TITLE: Gitdemo
+
+
+* Usage of existing repository
+
+- =git status=  (checks status)
+- =git add .= (adds all files in current directory to git)
+- =git commit -m "message"= (creates a commit with message "message")
+- =git push= (pushes changes to github repository)

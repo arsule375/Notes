@@ -48,13 +48,13 @@ To execute a code block do =C-c C-c=
 // your first program
 class Helloworld {
     public static void main(String[] args){
-        System.out.println("Hello world!");
+        System.out.println("Hello There!");
     }
 }
 #+end_src
 
 #+RESULTS:
-: Hello world!
+: Hello There!
 
 
 #+begin_src cpp :exports both :eval no-export
@@ -95,9 +95,12 @@ How to make table type | name | name | <tab> =C-c= <enter
 | adi    | laborgini |
 | dad    | honda     |
 
-| name   | Home |
-|--------+------|
-| Atharv | US   |
+| name   | Home  |
+|--------+-------|
+| Atharv | US    |
+| Adi    | India |
+| dad    | US    |
+
 
 
 * Basic Emacs
