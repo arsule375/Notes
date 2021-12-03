@@ -1,0 +1,87 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{java.io.File}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.io.FileNotFoundException}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.io.PrintWriter}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.util.Scanner}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.text.NumberFormat}\PYG{p}{;}
+
+\PYG{k+kd}{public} \PYG{k+kd}{class} \PYG{n+nc}{Auditorium} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{double}\PYG{o}{[][]} \PYG{n}{seats}\PYG{p}{;}
+    \PYG{k+kt}{double} \PYG{n}{totalSales}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{numSold}\PYG{p}{;}
+
+    \PYG{c+c1}{// default constructor}
+    \PYG{k+kd}{public} \PYG{n+nf}{Auditorium} \PYG{p}{()}  \PYG{p}{\PYGZob{}}
+	\PYG{n}{seats} \PYG{o}{=} \PYG{k}{new} \PYG{k+kt}{double}\PYG{o}{[}\PYG{l+m+mi}{3}\PYG{o}{][}\PYG{l+m+mi}{4}\PYG{o}{]}\PYG{p}{;}
+	\PYG{c+c1}{// to view path with file in pathname and click on the file}
+	\PYG{k}{try} \PYG{p}{\PYGZob{}}
+	    \PYG{n}{File} \PYG{n}{inputFile} \PYG{o}{=} \PYG{k}{new} \PYG{n}{File}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}seatPrices.txt\PYGZdq{}}\PYG{p}{);}
+	    \PYG{n}{Scanner} \PYG{n}{in} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Scanner}\PYG{p}{(}\PYG{n}{inputFile}\PYG{p}{);}
+	    \PYG{k}{while} \PYG{p}{(}\PYG{n}{in}\PYG{p}{.}\PYG{n+na}{hasNextDouble}\PYG{p}{())\PYGZob{}}
+		\PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{3}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++} \PYG{p}{)\PYGZob{}}
+		    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{4}\PYG{p}{;} \PYG{n}{j}\PYG{o}{++}\PYG{p}{)\PYGZob{}}
+			\PYG{k+kt}{double} \PYG{n}{value} \PYG{o}{=} \PYG{n}{in}\PYG{p}{.}\PYG{n+na}{nextDouble}\PYG{p}{();}
+			\PYG{n}{seats}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]} \PYG{o}{=} \PYG{n}{value}\PYG{p}{;}
+		   \PYG{p}{\PYGZcb{}}
+	       \PYG{p}{\PYGZcb{}}
+	    \PYG{p}{\PYGZcb{}}
+	\PYG{p}{\PYGZcb{}} \PYG{k}{catch} \PYG{p}{(}\PYG{n}{FileNotFoundException} \PYG{n}{e}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+	    \PYG{n}{e}\PYG{p}{.}\PYG{n+na}{printStackTrace}\PYG{p}{();}
+	\PYG{p}{\PYGZcb{}}
+	\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{();}
+       \PYG{n}{totalSales} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+       \PYG{n}{numSold}  \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{c+c1}{// gets the total price of the tickets sold}
+    \PYG{k+kd}{public} \PYG{n}{String} \PYG{n+nf}{getTotal}\PYG{p}{()\PYGZob{}}
+
+	\PYG{n}{NumberFormat} \PYG{n}{fmt} \PYG{o}{=} \PYG{n}{NumberFormat}\PYG{p}{.}\PYG{n+na}{getCurrencyInstance}\PYG{p}{();}
+	\PYG{n}{fmt}\PYG{p}{.}\PYG{n+na}{format}\PYG{p}{(}\PYG{n}{totalSales}\PYG{p}{);}
+	\PYG{k}{return} \PYG{l+s}{\PYGZdq{}\PYGZdq{}} \PYG{o}{+}  \PYG{n}{fmt}\PYG{p}{.}\PYG{n+na}{format}\PYG{p}{(} \PYG{n}{totalSales}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{displayChart}\PYG{p}{()\PYGZob{}}
+	\PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{3}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++} \PYG{p}{)\PYGZob{}}
+	    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{4}\PYG{p}{;} \PYG{n}{j}\PYG{o}{++}\PYG{p}{)\PYGZob{}}
+		\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(} \PYG{n}{seats}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]} \PYG{o}{+} \PYG{l+s}{\PYGZdq{}    \PYGZdq{}}\PYG{p}{);;}
+	    \PYG{p}{\PYGZcb{}}
+	    \PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{p}{);}
+	\PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{c+c1}{// used to sell tickets by setting ticket value to zero}
+    \PYG{k+kd}{public} \PYG{k+kt}{boolean} \PYG{n+nf}{sellTicket}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{j}\PYG{p}{)\PYGZob{}}
+	\PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{l} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{l} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{3}\PYG{p}{;} \PYG{n}{l}\PYG{o}{++} \PYG{p}{)\PYGZob{}}
+	    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{m} \PYG{o}{=} \PYG{l+m+mi}{0} \PYG{p}{;} \PYG{n}{m} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{4}\PYG{p}{;} \PYG{n}{m}\PYG{o}{++}\PYG{p}{)\PYGZob{}}
+		\PYG{k}{if} \PYG{p}{((} \PYG{n}{i} \PYG{o}{==} \PYG{n}{l}\PYG{p}{)} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{p}{(}\PYG{n}{j} \PYG{o}{==} \PYG{n}{m}\PYG{p}{))\PYGZob{}}
+		    \PYG{k}{if}\PYG{p}{(}\PYG{n}{seats}\PYG{o}{[}\PYG{n}{l}\PYG{o}{][}\PYG{n}{m}\PYG{o}{]} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{)\PYGZob{}}
+			\PYG{n}{totalSales} \PYG{o}{=} \PYG{n}{totalSales} \PYG{o}{+} \PYG{n}{seats}\PYG{o}{[}\PYG{n}{l}\PYG{o}{][}\PYG{n}{m}\PYG{o}{]}\PYG{p}{;}
+			\PYG{n}{numSold}\PYG{o}{++}\PYG{p}{;}
+			\PYG{n}{seats}\PYG{o}{[}\PYG{n}{l}\PYG{o}{][}\PYG{n}{m}\PYG{o}{]} \PYG{o}{=} \PYG{l+m+mf}{0.0}\PYG{p}{;}
+			\PYG{k}{return} \PYG{k+kc}{true}\PYG{p}{;}
+		    \PYG{p}{\PYGZcb{}}
+		\PYG{p}{\PYGZcb{}}
+	    \PYG{p}{\PYGZcb{}}
+	\PYG{p}{\PYGZcb{}}
+	\PYG{k}{return} \PYG{k+kc}{false}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{c+c1}{// gets number of tickets sold}
+    \PYG{k+kd}{public} \PYG{k+kt}{int} \PYG{n+nf}{numSold}\PYG{p}{()\PYGZob{}}
+	\PYG{k}{return} \PYG{n}{numSold}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{c+c1}{// checks if tickets are sold out or not}
+    \PYG{k+kd}{public} \PYG{k+kt}{boolean} \PYG{n+nf}{soldOut}\PYG{p}{()\PYGZob{}}
+	\PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{l} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{l} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{3}\PYG{p}{;} \PYG{n}{l}\PYG{o}{++} \PYG{p}{)\PYGZob{}}
+	    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{m} \PYG{o}{=} \PYG{l+m+mi}{0} \PYG{p}{;} \PYG{n}{m} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{4}\PYG{p}{;} \PYG{n}{m}\PYG{o}{++}\PYG{p}{)\PYGZob{}}
+	       \PYG{k}{if}\PYG{p}{(}\PYG{n}{seats}\PYG{o}{[}\PYG{n}{l}\PYG{o}{][}\PYG{n}{m}\PYG{o}{]} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{)\PYGZob{}}
+		   \PYG{k}{return} \PYG{k+kc}{false}\PYG{p}{;}
+	       \PYG{p}{\PYGZcb{}}
+	    \PYG{p}{\PYGZcb{}}
+	\PYG{p}{\PYGZcb{}}
+	\PYG{k}{return} \PYG{k+kc}{true}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

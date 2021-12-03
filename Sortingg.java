@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Sorting {
+public class Sortingg {
     public static void main(String[] args) {
         int arr[ ] =  { 8, 6, 9, 3 ,4, 5 };
 
@@ -19,6 +19,8 @@ public class Sorting {
 
         System.out.println("");
 
+
+
     }
 
     private static int[] insertionSort(int[] arr) {
@@ -32,7 +34,7 @@ public class Sorting {
             }
 
             String array2 = Arrays.toString(arr);
-            System.out.println(array2);
+            System.out.println("Phase" + (i) + ":" +  array2);
 
         }
 
