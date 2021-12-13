@@ -1,0 +1,45 @@
+* Ch 1: Fundamentals
+** Summary of topics
+   -Algorithums: methods for solving problems that are suited
+   for computer implemtation
+   -Data Structures: schemes for organizing data to make them solvable for
+   Alogrithums
+   -basic programming model: small subset of java plus authors owns libraries for
+    input/output for statiscal calculations
+   -Data abstraction: to remove phsical or spacial properties in data to move virtual
+** 1.1: Basic programming model
+   -We implement  Algorithums as programs in java because:
+       -Our programs are concese, elegant, and complete desciptions
+       of algorithums
+       -You can run algorithums to study their properties
+       -You can put them to good use immediately in applications
+
+   -Programming constructs(building blocks), software libraries( programmming concepts),
+     and operating systems used to impemet programs make up our
+     peogramming model
+   -To understand this model let us frist talk about statements
+   -Here are the different types of statements:
+       -Declarations: reate specific type of variables and name w
+       identifiers
+       -Assingments: associate data type with variable
+       -Conditionals: provide change in execution flow
+       -Loops: more profound change in execution flow, repeat block mutiple times
+       -Call and returns relate static methods
+   - arrays      - EX: public satic squrt(double c)
+   -properties of methods
+     -Methods can be overloaded
+     -methods have a single return value but can have mulitple return statements
+     -A method can have side effects
+   - Recursion: method will call intself
+   - External Libraries: imported statements (ex: java.lang.*)
+	  
+	
+	 
+** 1.2: Data Abstraction
+** 1.3: Bags, Queues, and Stacks
+** 1.4: Analysis of Algorithums
+** 1.5: Case Study: Union-Find
+
+* Ch 2: Sorting
+** 2.1: Elementary Sorts
+** 2.2 Merge Sort

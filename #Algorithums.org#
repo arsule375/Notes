@@ -1,0 +1,49 @@
+#+TITLE: Algorithms
+#+LATEX_CLASS: report
+
+* Fundamentals
+** Summary of topics
+       - You can run algorithms to study their properties
+       - You can put them to good use immediately in applications
+
+   - Programming constructs(building blocks), software libraries( programmming concepts),
+     and operating systems used to impemet programs make up our
+     peogramming model
+   - To understand this model let us frist talk about statements
+   - Here are the different types of statements:
+       - Declarations: reate specific type of variables and name w
+         identifiers
+       - Assignments: associate data type with variable
+       - Conditionals: provide change in execution flow
+       - Loops: more profound change in execution flow, repeat block mutiple times
+       - Call and returns relate static methods
+   - arrays store a sequence of values
+      - to initalize an array declare array name and type,create the array
+      initalxe the values
+      - Defalt values are set to zero, you initalze them through a for loop
+   - Static methods: can bel declared without the name of the method, declare class
+     name
+     - Here's an example static method:
+       #+begin_src java
+       public static squrt(double c)
+       #+end_src
+   - properties of methods
+     - Methods can be overloaded
+     - methods have a single return value but can have mulitple return statements
+     - A method can have side effects
+   - Recursion: method will call intself
+   - External Libraries: imported statements (ex: =java.lang.*=)
+*** Subheading
+** Data Abstraction
+   - hello
+   - this
+   - $e=mc^2$
+   - This is displalystyle: $$e=mc^2$$
+   - k
+** Bags, Queues, and Stacks
+** Analysis of Algorithms
+** Case Study: Union-Find
+
+* Sorting
+** Elementary Sorts
+** Merge Sort
