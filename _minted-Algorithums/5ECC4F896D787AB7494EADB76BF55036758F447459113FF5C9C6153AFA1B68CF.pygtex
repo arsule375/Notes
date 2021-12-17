@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Counter} \PYG{n}{heads} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Counter}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}heads\PYGZdq{}}\PYG{p}{);}
+\PYG{n}{heads}\PYG{p}{.}\PYG{n+na}{increment}\PYG{p}{();}
+\end{Verbatim}

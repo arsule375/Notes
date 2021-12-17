@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Node} \PYG{n}{oldlast} \PYG{o}{=} \PYG{n}{last}\PYG{p}{;}
+\PYG{n}{last} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Node}\PYG{p}{();}
+\PYG{n}{last}\PYG{p}{.}\PYG{n+na}{item} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}not\PYGZdq{}}\PYG{p}{;}
+\PYG{n}{oldlast}\PYG{p}{.}\PYG{n+na}{next} \PYG{o}{=} \PYG{n}{last}\PYG{p}{;}
+\end{Verbatim}

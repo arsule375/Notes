@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{private} \PYG{k+kd}{class} \PYG{n+nc}{Node}
+\PYG{p}{\PYGZob{}}
+   \PYG{n}{Item} \PYG{n}{item}\PYG{p}{;}
+   \PYG{n}{Node} \PYG{n}{next}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

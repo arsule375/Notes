@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// you declare your values like this}
+\PYG{n}{Node} \PYG{n}{first} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Node}\PYG{p}{();}
+\PYG{n}{Node} \PYG{n}{second} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Node}\PYG{p}{();}
+\PYG{n}{Node} \PYG{n}{third} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Node}\PYG{p}{();}
+\PYG{c+c1}{// you iniialise the values like this, they can take up any data value}
+\PYG{n}{first}\PYG{p}{.}\PYG{n+na}{item} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}to\PYGZdq{}}\PYG{p}{;}
+\PYG{n}{second}\PYG{p}{.}\PYG{n+na}{item} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}be\PYGZdq{}}\PYG{p}{;}
+\PYG{n}{third}\PYG{p}{.}\PYG{n+na}{item} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}or\PYGZdq{}}\PYG{p}{;}
+
+\PYG{c+c1}{// Then you will set the next feilds to}
+\PYG{n}{first}\PYG{p}{.}\PYG{n+na}{next} \PYG{o}{=} \PYG{n}{second}\PYG{p}{;}
+\PYG{n}{second}\PYG{p}{.}\PYG{n+na}{next} \PYG{o}{=} \PYG{n}{third}
+\PYG{c+c1}{// Third remains null becuse there is no node after it}
+\end{Verbatim}

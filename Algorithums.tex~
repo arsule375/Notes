@@ -1,4 +1,4 @@
-% Created 2021-12-11 Sat 23:07
+% Created 2021-12-16 Thu 21:53
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{report}
 \usepackage[utf8]{inputenc}
@@ -32,9 +32,9 @@
 
 
 \part{Fundamentals}
-\label{sec:orgfebb42c}
+\label{sec:org84ce3b0}
 \chapter{Summary of topics}
-\label{sec:org6be01c8}
+\label{sec:orgb8672d4}
 \begin{itemize}
 \item You can run algorithms to study their properties
 \item You can put them to good use immediately in applications
@@ -79,20 +79,214 @@ public static squrt(double c)
 \item External Libraries: imported statements (ex: \texttt{java.lang.*})
 \end{itemize}
 \section{Subheading}
-\label{sec:org97c8483}
+\label{sec:org8619355}
 \chapter{Data Abstraction}
-\label{sec:orga59ed55}
+\label{sec:orgc82e023}
+\begin{itemize}
+\item Abstract data type: data type whose representation is hidden from the client
+\item Abstract data types are important because they support encapsulation.
+\item You do not need to know the data type implemented in order to be able to use it
+\item Objects are characterized by three properties: state, identity, behavior
+\item State: value from its data type
+\item Identity: distinguishes one object from another.
+\item Behavior: are an objects predefined functions.
+\item Reference: means of accessing an object
+\item To invoke methods, you would put the class name "." and then the method
+name
+\item For Example:
+\begin{minted}[]{java}
+Counter heads = new Counter("heads");
+heads.increment();
+\end{minted}
+\item The primary purpose of static methods is to implement functions,
+while non-static methods implement data-type operations
+\item Aliasing: both variables refer to the same object
+\item For Example:
+\begin{minted}[]{java}
+Counter c1 = new Counter("ones");
+c1.increment();
+Counter c2 = c1;
+c2.increment;
+stdOut.println(c1);
+\end{minted}
+\item you can pass objects as arguments to methods, java passes
+a copy of the argument value from the calling program to the
+method(cannot change value of the variable
+\item All nonprimitve types are objects so in a way arrays are objects
+\item \(e=mc^2\)
+\item Writing code that refers to data abstraction is referred to as
+object-oriented programming
+\item This is displalystyle: $$e=mc^2$$
+\item (ADT): to simplify client code
+\item \texttt{In} Class allows multiple lines of code
+\item Constructor-initiates instance variables
+\item Scope:(parameter: the method, Local: the block statement, Instance: whole class)
+
+\item Instace methods: behavior of class
+
+\item Sometimes you need to maintain two implementations
+one for clients and another for other people
+
+\item immutable data type: value never changes once cons
+
+\item Algorithms is an implementation of an is the implementation of an
+instance method in an absract data type
+
+\item Data absraction is good for algorithms because it is a framework
+because it specifies what the algorithms need to accomplish and how the client
+can make use of it
+\end{itemize}
 \chapter{Bags, Queues, and Stacks}
-\label{sec:orgde4d606}
+\label{sec:org56a5a2c}
+\begin{itemize}
+\item several fundemental data types involve collection of objects
+\item bag queu and stack are essiential in unfersanding algorithums
+\item parameterized types- pass in what type of data that you want to use
+\item EX:
+\begin{minted}[]{java}
+     Stack<String> stack = new Stack<String>();
+     stack.push("Test");
+
+     String next = stack.pop();
+     #+end_src java
+   - Casting a primitve type as a wrapper
+   - FIFO queue- first to leave and frit to ender polcy
+   - pushdown stack- based on first in frist out
+   - Arithmeic: below is an example of how arithmetic is used in java 
+      #+begin_src java
+ import java.util.Stack;
+import java.util.*;
+
+public class Evaluate {
+    public static void main(String[] args) {
+	Stack<String> ops = new  Stack<String>();
+	Stack<Double> vals = new  Stack<Double>();
+
+	// if array args length is equal to zero then the length is zero
+//        if (args.length == 0) {
+//            System.out.println("Usage:expression");
+//            return;
+//        }
+	String arg1 = args[0];
+	int charIndex = 0;
+	System.out.println(arg1.length());
+	while (charIndex < arg1.length()){
+	    char stringChar = arg1.toCharArray()[charIndex++];
+	    String s ="" + stringChar;
+	    if(s.equals("(")) {
+
+	    }else if (s.equals("+")){
+		ops.push(s);
+	    } else if(s.equals("-")){
+		ops.push(s);
+	    }else if (s.equals("*")){
+		ops.push(s);
+	    }else if(s.equals("/")){
+		ops.push(s);
+	    }else if (s.equals("sqrt")){
+		ops.push(s);
+	    }else if (s.equals(")")){
+		String op = ops.pop();
+		double v = vals.pop();
+		if(op.equals("+")){
+		    v = vals.pop() + v;
+		}else if (op.equals("-")){
+		    v = vals.pop() -v;
+		}else if(op.equals("*")){
+		    v = vals.pop() *v;
+		}else if (op.equals("/")){
+		    v = vals.pop()/ v;
+		}else if(op.equals("sqrt")){
+		    v = Math.sqrt(v);
+		}
+		vals.push(v);
+	    }else{
+		vals.push(Double.parseDouble(s));
+	    }
+	};
+	System.out.println(vals.pop());
+    }
+}
+
+\end{minted}
+\item abstact data type is a fixed capacity stack
+\item fixed capacity stack only works for strings
+\item it requires a cleint to spe
+\item The pproblem with fixed stack is that it only uses strings
+to do this we to devolp another class w similar code
+\item It is possible to iterate through a Stack
+\item Linked list is recsive data structure that is either empy or a refernce to a
+node having a generic item and refernce to a node having generic item and
+a refernce to a linked list
+\item Ex:
+\begin{minted}[]{java}
+private class Node
+{
+   Item item;
+   Node next;
+}
+\end{minted}
+\item A note has two instance variables: An item and a node
+\item You define a node in a class and make it private becuse it is not for use by clients
+\item we Use \texttt{new Node()}, results in a new node object with its initial values being null
+\item you refer to node instance variables by saying: \texttt{first.item}, \& \texttt{first.next} this
+is known as records
+\item Below explans how you would build a linked list:
+\begin{minted}[]{java}
+// you declare your values like this
+Node first = new Node();
+Node second = new Node();
+Node third = new Node();
+// you iniialise the values like this, they can take up any data value
+first.item = "to";
+second.item = "be";
+third.item = "or";
+
+// Then you will set the next feilds to
+first.next = second;
+second.next = third
+// Third remains null becuse there is no node after it 
+\end{minted}
+\item A liked list represents a sequence of items
+\item use rectangle system to see each object
+Do as follows: \texttt{[to/ ]-> [be/ ] -> [or/(null)]}
+\item If you want to insert a new node in the list the best place to do so
+is at the beggining of the list
+\item Here is how
+\begin{minted}[]{java}
+// 
+ Node oldFirst = first;
+ First = new Node();
+ first.item = "not";
+ first.next = oldfirst;
+
+\end{minted}
+\begin{itemize}
+\item to remove nodes from the list you can assign the value \texttt{first} to \texttt{first.next}
+
+\item like this:
+\begin{minted}[]{java}
+first = first.next;
+\end{minted}
+\begin{itemize}
+\item this assing the first value to the value that comes after it
+elimating the original value
+
+\item 
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
 \chapter{Analysis of Algorithms}
-\label{sec:orgd1efab5}
+\label{sec:org6f57a63}
 \chapter{Case Study: Union-Find}
-\label{sec:orga8ded8d}
+\label{sec:orgcca48c4}
 
 \part{Sorting}
-\label{sec:orgbf451ee}
+\label{sec:org20f5176}
 \chapter{Elementary Sorts}
-\label{sec:org2d1acda}
+\label{sec:orga58cf79}
 \chapter{Merge Sort}
-\label{sec:org58fdec6}
+\label{sec:org148d76a}
 \end{document}

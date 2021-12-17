@@ -1,0 +1,65 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+     \PYG{n}{Stack}\PYG{o}{\PYGZlt{}}\PYG{n}{String}\PYG{o}{\PYGZgt{}} \PYG{n}{stack} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Stack}\PYG{o}{\PYGZlt{}}\PYG{n}{String}\PYG{o}{\PYGZgt{}}\PYG{p}{();}
+     \PYG{n}{stack}\PYG{p}{.}\PYG{n+na}{push}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Test\PYGZdq{}}\PYG{p}{);}
+
+     \PYG{n}{String} \PYG{n}{next} \PYG{o}{=} \PYG{n}{stack}\PYG{p}{.}\PYG{n+na}{pop}\PYG{p}{();}
+     \PYG{err}{\PYGZsh{}}\PYG{o}{+}\PYG{n}{end\PYGZus{}src} \PYG{n}{java}
+   \PYG{o}{\PYGZhy{}} \PYG{n}{Casting} \PYG{n}{a} \PYG{n}{primitve} \PYG{n}{type} \PYG{n}{as} \PYG{n}{a} \PYG{n}{wrapper}
+   \PYG{o}{\PYGZhy{}} \PYG{n}{FIFO} \PYG{n}{queue}\PYG{o}{\PYGZhy{}} \PYG{n}{first} \PYG{n}{to} \PYG{n}{leave} \PYG{n}{and} \PYG{n}{frit} \PYG{n}{to} \PYG{n}{ender} \PYG{n}{polcy}
+   \PYG{o}{\PYGZhy{}} \PYG{n}{pushdown} \PYG{n}{stack}\PYG{o}{\PYGZhy{}} \PYG{n}{based} \PYG{n}{on} \PYG{n}{first} \PYG{n}{in} \PYG{n}{frist} \PYG{n}{out}
+   \PYG{o}{\PYGZhy{}} \PYG{n}{Arithmeic}\PYG{p}{:} \PYG{n}{below} \PYG{n}{is} \PYG{n}{an} \PYG{n}{example} \PYG{n}{of} \PYG{n}{how} \PYG{n}{arithmetic} \PYG{n}{is} \PYG{n}{used} \PYG{n}{in} \PYG{n}{java}
+      \PYG{err}{\PYGZsh{}}\PYG{o}{+}\PYG{n}{begin\PYGZus{}src} \PYG{n}{java}
+ \PYG{k+kn}{import} \PYG{n+nn}{java.util.Stack}\PYG{p}{;}
+\PYG{k+kn}{import} \PYG{n+nn}{java.util.*}\PYG{p}{;}
+
+\PYG{k+kd}{public} \PYG{k+kd}{class} \PYG{n+nc}{Evaluate} \PYG{p}{\PYGZob{}}
+    \PYG{k+kd}{public} \PYG{k+kd}{static} \PYG{k+kt}{void} \PYG{n+nf}{main}\PYG{p}{(}\PYG{n}{String}\PYG{o}{[]} \PYG{n}{args}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+	\PYG{n}{Stack}\PYG{o}{\PYGZlt{}}\PYG{n}{String}\PYG{o}{\PYGZgt{}} \PYG{n}{ops} \PYG{o}{=} \PYG{k}{new}  \PYG{n}{Stack}\PYG{o}{\PYGZlt{}}\PYG{n}{String}\PYG{o}{\PYGZgt{}}\PYG{p}{();}
+	\PYG{n}{Stack}\PYG{o}{\PYGZlt{}}\PYG{n}{Double}\PYG{o}{\PYGZgt{}} \PYG{n}{vals} \PYG{o}{=} \PYG{k}{new}  \PYG{n}{Stack}\PYG{o}{\PYGZlt{}}\PYG{n}{Double}\PYG{o}{\PYGZgt{}}\PYG{p}{();}
+
+	\PYG{c+c1}{// if array args length is equal to zero then the length is zero}
+\PYG{c+c1}{//        if (args.length == 0) \PYGZob{}}
+\PYG{c+c1}{//            System.out.println(\PYGZdq{}Usage:expression\PYGZdq{});}
+\PYG{c+c1}{//            return;}
+\PYG{c+c1}{//        \PYGZcb{}}
+	\PYG{n}{String} \PYG{n}{arg1} \PYG{o}{=} \PYG{n}{args}\PYG{o}{[}\PYG{l+m+mi}{0}\PYG{o}{]}\PYG{p}{;}
+	\PYG{k+kt}{int} \PYG{n}{charIndex} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+	\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{n}{arg1}\PYG{p}{.}\PYG{n+na}{length}\PYG{p}{());}
+	\PYG{k}{while} \PYG{p}{(}\PYG{n}{charIndex} \PYG{o}{\PYGZlt{}} \PYG{n}{arg1}\PYG{p}{.}\PYG{n+na}{length}\PYG{p}{())\PYGZob{}}
+	    \PYG{k+kt}{char} \PYG{n}{stringChar} \PYG{o}{=} \PYG{n}{arg1}\PYG{p}{.}\PYG{n+na}{toCharArray}\PYG{p}{()}\PYG{o}{[}\PYG{n}{charIndex}\PYG{o}{++]}\PYG{p}{;}
+	    \PYG{n}{String} \PYG{n}{s} \PYG{o}{=}\PYG{l+s}{\PYGZdq{}\PYGZdq{}} \PYG{o}{+} \PYG{n}{stringChar}\PYG{p}{;}
+	    \PYG{k}{if}\PYG{p}{(}\PYG{n}{s}\PYG{p}{.}\PYG{n+na}{equals}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}(\PYGZdq{}}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+
+	    \PYG{p}{\PYGZcb{}}\PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{s}\PYG{p}{.}\PYG{n+na}{equals}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}+\PYGZdq{}}\PYG{p}{))\PYGZob{}}
+		\PYG{n}{ops}\PYG{p}{.}\PYG{n+na}{push}\PYG{p}{(}\PYG{n}{s}\PYG{p}{);}
+	    \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n}{s}\PYG{p}{.}\PYG{n+na}{equals}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZhy{}\PYGZdq{}}\PYG{p}{))\PYGZob{}}
+		\PYG{n}{ops}\PYG{p}{.}\PYG{n+na}{push}\PYG{p}{(}\PYG{n}{s}\PYG{p}{);}
+	    \PYG{p}{\PYGZcb{}}\PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{s}\PYG{p}{.}\PYG{n+na}{equals}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}*\PYGZdq{}}\PYG{p}{))\PYGZob{}}
+		\PYG{n}{ops}\PYG{p}{.}\PYG{n+na}{push}\PYG{p}{(}\PYG{n}{s}\PYG{p}{);}
+	    \PYG{p}{\PYGZcb{}}\PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n}{s}\PYG{p}{.}\PYG{n+na}{equals}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}/\PYGZdq{}}\PYG{p}{))\PYGZob{}}
+		\PYG{n}{ops}\PYG{p}{.}\PYG{n+na}{push}\PYG{p}{(}\PYG{n}{s}\PYG{p}{);}
+	    \PYG{p}{\PYGZcb{}}\PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{s}\PYG{p}{.}\PYG{n+na}{equals}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}sqrt\PYGZdq{}}\PYG{p}{))\PYGZob{}}
+		\PYG{n}{ops}\PYG{p}{.}\PYG{n+na}{push}\PYG{p}{(}\PYG{n}{s}\PYG{p}{);}
+	    \PYG{p}{\PYGZcb{}}\PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{s}\PYG{p}{.}\PYG{n+na}{equals}\PYG{p}{(}\PYG{l+s}{\PYGZdq{})\PYGZdq{}}\PYG{p}{))\PYGZob{}}
+		\PYG{n}{String} \PYG{n}{op} \PYG{o}{=} \PYG{n}{ops}\PYG{p}{.}\PYG{n+na}{pop}\PYG{p}{();}
+		\PYG{k+kt}{double} \PYG{n}{v} \PYG{o}{=} \PYG{n}{vals}\PYG{p}{.}\PYG{n+na}{pop}\PYG{p}{();}
+		\PYG{k}{if}\PYG{p}{(}\PYG{n}{op}\PYG{p}{.}\PYG{n+na}{equals}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}+\PYGZdq{}}\PYG{p}{))\PYGZob{}}
+		    \PYG{n}{v} \PYG{o}{=} \PYG{n}{vals}\PYG{p}{.}\PYG{n+na}{pop}\PYG{p}{()} \PYG{o}{+} \PYG{n}{v}\PYG{p}{;}
+		\PYG{p}{\PYGZcb{}}\PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{op}\PYG{p}{.}\PYG{n+na}{equals}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZhy{}\PYGZdq{}}\PYG{p}{))\PYGZob{}}
+		    \PYG{n}{v} \PYG{o}{=} \PYG{n}{vals}\PYG{p}{.}\PYG{n+na}{pop}\PYG{p}{()} \PYG{o}{\PYGZhy{}}\PYG{n}{v}\PYG{p}{;}
+		\PYG{p}{\PYGZcb{}}\PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n}{op}\PYG{p}{.}\PYG{n+na}{equals}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}*\PYGZdq{}}\PYG{p}{))\PYGZob{}}
+		    \PYG{n}{v} \PYG{o}{=} \PYG{n}{vals}\PYG{p}{.}\PYG{n+na}{pop}\PYG{p}{()} \PYG{o}{*}\PYG{n}{v}\PYG{p}{;}
+		\PYG{p}{\PYGZcb{}}\PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{op}\PYG{p}{.}\PYG{n+na}{equals}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}/\PYGZdq{}}\PYG{p}{))\PYGZob{}}
+		    \PYG{n}{v} \PYG{o}{=} \PYG{n}{vals}\PYG{p}{.}\PYG{n+na}{pop}\PYG{p}{()}\PYG{o}{/} \PYG{n}{v}\PYG{p}{;}
+		\PYG{p}{\PYGZcb{}}\PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n}{op}\PYG{p}{.}\PYG{n+na}{equals}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}sqrt\PYGZdq{}}\PYG{p}{))\PYGZob{}}
+		    \PYG{n}{v} \PYG{o}{=} \PYG{n}{Math}\PYG{p}{.}\PYG{n+na}{sqrt}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);}
+		\PYG{p}{\PYGZcb{}}
+		\PYG{n}{vals}\PYG{p}{.}\PYG{n+na}{push}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);}
+	    \PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{p}{\PYGZob{}}
+		\PYG{n}{vals}\PYG{p}{.}\PYG{n+na}{push}\PYG{p}{(}\PYG{n}{Double}\PYG{p}{.}\PYG{n+na}{parseDouble}\PYG{p}{(}\PYG{n}{s}\PYG{p}{));}
+	    \PYG{p}{\PYGZcb{}}
+	\PYG{p}{\PYGZcb{};}
+	\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{n}{vals}\PYG{p}{.}\PYG{n+na}{pop}\PYG{p}{());}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{first} \PYG{o}{=} \PYG{n}{first}\PYG{p}{.}\PYG{n+na}{next}\PYG{p}{;}
+\end{Verbatim}

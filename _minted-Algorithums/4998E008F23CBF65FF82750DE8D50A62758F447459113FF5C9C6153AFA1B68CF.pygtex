@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Counter} \PYG{n}{c1} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Counter}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}ones\PYGZdq{}}\PYG{p}{);}
+\PYG{n}{c1}\PYG{p}{.}\PYG{n+na}{increment}\PYG{p}{();}
+\PYG{n}{Counter} \PYG{n}{c2} \PYG{o}{=} \PYG{n}{c1}\PYG{p}{;}
+\PYG{n}{c2}\PYG{p}{.}\PYG{n+na}{increment}\PYG{p}{;}
+\PYG{n}{stdOut}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{n}{c1}\PYG{p}{);}
+\end{Verbatim}

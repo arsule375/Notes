@@ -35,11 +35,172 @@
    - External Libraries: imported statements (ex: =java.lang.*=)
 *** Subheading
 ** Data Abstraction
-   - hello
-   - this
+   - Abstract data type: data type whose representation is hidden from the client
+   - Abstract data types are important because they support encapsulation.
+   - You do not need to know the data type implemented in order to be able to use it
+   - Objects are characterized by three properties: state, identity, behavior
+   - State: value from its data type
+   - Identity: distinguishes one object from another.
+   - Behavior: are an objects predefined functions.
+   - Reference: means of accessing an object
+   - To invoke methods, you would put the class name "." and then the method
+     name
+   - For Example:
+      #+begin_src java
+	Counter heads = new Counter("heads");
+        heads.increment();
+       #+end_src
+   - The primary purpose of static methods is to implement functions,
+     while non-static methods implement data-type operations
+   - Aliasing: both variables refer to the same object
+   - For Example:
+     #+begin_src java
+       Counter c1 = new Counter("ones");
+       c1.increment();
+       Counter c2 = c1;
+       c2.increment;
+       stdOut.println(c1);
+     #+end_src
+   - you can pass objects as arguments to methods, java passes
+     a copy of the argument value from the calling program to the
+     method(cannot change value of the variable
+   - All nonprimitve types are objects so in a way arrays are objects
    - $e=mc^2$
+   - Writing code that refers to data abstraction is referred to as
+     object-oriented programming
    - This is displalystyle: $$e=mc^2$$
+   - (ADT): to simplify client code
+   - =In= Class allows multiple lines of code
+   - Constructor-initiates instance variables
+   - Scope:(parameter: the method, Local: the block statement, Instance: whole class)
+
+   - Instace methods: behavior of class
+       
+   - Sometimes you need to maintain two implementations
+     one for clients and another for other people
+
+   - immutable data type: value never changes once cons
+
+   - Algorithms is an implementation of an is the implementation of an
+     instance method in an absract data type
+
+   - Data absraction is good for algorithms because it is a framework
+     because it specifies what the algorithms need to accomplish and how the client
+     can make use of it 
 ** Bags, Queues, and Stacks
+   - several fundemental data types involve collection of objects
+   - bag queu and stack are essiential in unfersanding algorithums
+   - parameterized types- pass in what type of data that you want to use
+   - EX:
+     #+begin_src java
+     Stack<String> stack = new Stack<String>();
+     stack.push("Test");
+
+     String next = stack.pop();
+     #+end_src java
+   - Casting a primitve type as a wrapper
+   - FIFO queue- first to leave and frit to ender polcy
+   - pushdown stack- based on first in frist out
+   - Arithmeic: below is an example of how arithmetic is used in java 
+      #+begin_src java
+ import java.util.Stack;
+import java.util.*;
+
+public class Evaluate {
+    public static void main(String[] args) {
+        Stack<String> ops = new  Stack<String>();
+        Stack<Double> vals = new  Stack<Double>();
+
+        // if array args length is equal to zero then the length is zero
+//        if (args.length == 0) {
+//            System.out.println("Usage:expression");
+//            return;
+//        }
+        String arg1 = args[0];
+        int charIndex = 0;
+        System.out.println(arg1.length());
+        while (charIndex < arg1.length()){
+            char stringChar = arg1.toCharArray()[charIndex++];
+            String s ="" + stringChar;
+            if(s.equals("(")) {
+
+            }else if (s.equals("+")){
+                ops.push(s);
+            } else if(s.equals("-")){
+                ops.push(s);
+            }else if (s.equals("*")){
+                ops.push(s);
+            }else if(s.equals("/")){
+                ops.push(s);
+            }else if (s.equals("sqrt")){
+                ops.push(s);
+            }else if (s.equals(")")){
+                String op = ops.pop();
+                double v = vals.pop();
+                if(op.equals("+")){
+                    v = vals.pop() + v;
+                }else if (op.equals("-")){
+                    v = vals.pop() -v;
+                }else if(op.equals("*")){
+                    v = vals.pop() *v;
+                }else if (op.equals("/")){
+                    v = vals.pop()/ v;
+                }else if(op.equals("sqrt")){
+                    v = Math.sqrt(v);
+                }
+                vals.push(v);
+            }else{
+                vals.push(Double.parseDouble(s));
+            }
+        };
+        System.out.println(vals.pop());
+    }
+}
+
+     #+end_src java
+   - abstact data type is a fixed capacity stack
+   - fixed capacity stack only works for strings
+   - it requires a cleint to spe
+   - The pproblem with fixed stack is that it only uses strings
+     to do this we to devolp another class w similar code
+   - It is possible to iterate through a Stack
+   - Linked list is recsive data structure that is either empy or a refernce to a
+     node having a generic item and refernce to a node having generic item and
+     a refernce to a linked list 
+   - Ex:
+     #+begin_src java
+     private class Node
+     {
+        Item item;
+	Node next;
+     }
+     #+end_src java
+   - A note has two instance variables: An item and a node
+   - You define a node in a class and make it private becuse it is not for use by clients
+   - we Use =new Node()=, results in a new node object with its initial values being null
+   - you refer to node instance variables by saying: =first.item=, & =first.next= this
+     is known as records
+   - Below explans how you would build a linked list:
+     #+begin_src java
+     // you declare your values like this
+     Node first = new Node();
+     Node second = new Node();
+     Node third = new Node();
+
+     // you iniialise the values like this
+     first.item = "to";
+     second.item = "be";
+     third.item = "or";
+
+     // Then you will set the next feilds to
+     first.next = second;
+     second.next = third
+     // Third remains null becuse there is no node after it 
+     #+end_src java
+   - A liked list represents a sequence of items
+   - 
+     
+     
 ** Analysis of Algorithms
 ** Case Study: Union-Find
 
