@@ -221,16 +221,96 @@ public class Evaluate {
        - To insert at the end all you have to do is esablish a link to the last node
 	 in the list.
 
-       - Stack implementation basics:
+       - Stack, Queue, and Bag implentations for linked lists:
+	 
 
-       - Here is what you can do
-	   
-       - Here is how:
+       - Queue implementation basics:
+	 push & pop: ( add at the begining)
 	 #+begin_src java
-	   Node oldlast = last;
-	   last = new Node();
-	   last.item = "not";
-           oldlast.next = last;
+	   public void enquene(Item item){
+
+	      // adds item to end of the list
+	      Node oldlast = last;
+	      last = new Node();
+	      last.item = item;
+	      // next element after last is set to null
+	      last.next = null;
+	      // is empty checks if frist element is empty 
+	      if(isEmpty()){
+
+	      // sets frist equal to last 
+
+	      first = last
+
+
+	      }else{
+		// next value after oldlast is set to last 
+		oldlast.next = last
+
+	      }
+
+
+	    public Item pop()
+	   {
+
+	    // merges with item before it 
+	    Item item = first.item;
+	    first = first.next;
+	    N--;
+	    if(is.Empty()) last = null;
+            return item;
+	   }
+
+
+
+	   }
+
+         #+end_src
+
+	   - Stack implementation basics:
+	     push: (add item to the top of the stack)
+
+	     #+begin_src java
+
+
+		public void push(Item item){
+
+		Node oldFirst = first;
+		first = new Node();
+		// sets the old note equal to an item
+		first.item = item;
+                // sets nextNode equal to oldnote
+		first.next = oldfirst;
+
+
+	       }
+          #+end_src
+
+       - pop:( remove from the top of the stack)
+	  
+
+	  #+begin_src java
+	    public Item pop()
+	    {
+	      Item item = first.item;
+              // sets the current first equal to the next item 
+	      first = first.next;
+	      N--;
+	      return item
+	    }
+          #+end_src
+
+
+
+
+	    - Here is what you can do
+
+	    - Here is how:
+	      #+begin_src java
+		Node oldlast = last;
+		last = new Node();
+		last.item = "not";
+		oldlast.next = last;
 
 	 #+end_src
        - two ways to rpresnt collection of objects are arrays and linked lists

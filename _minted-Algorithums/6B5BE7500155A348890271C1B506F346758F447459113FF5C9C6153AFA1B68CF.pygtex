@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+ \PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{push}\PYG{p}{(}\PYG{n}{Item} \PYG{n}{item}\PYG{p}{)\PYGZob{}}
+
+ \PYG{n}{Node} \PYG{n}{oldFirst} \PYG{o}{=} \PYG{n}{first}\PYG{p}{;}
+ \PYG{n}{first} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Node}\PYG{p}{();}
+ \PYG{c+c1}{// sets the old note equal to an item}
+ \PYG{n}{first}\PYG{p}{.}\PYG{n+na}{item} \PYG{o}{=} \PYG{n}{item}\PYG{p}{;}
+ \PYG{c+c1}{// sets nextNode equal to oldnote}
+ \PYG{n}{first}\PYG{p}{.}\PYG{n+na}{next} \PYG{o}{=} \PYG{n}{oldfirst}\PYG{p}{;}
+
+
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

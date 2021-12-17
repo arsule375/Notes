@@ -1,4 +1,4 @@
-% Created 2021-12-16 Thu 21:53
+% Created 2021-12-16 Thu 23:41
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{report}
 \usepackage[utf8]{inputenc}
@@ -32,9 +32,9 @@
 
 
 \part{Fundamentals}
-\label{sec:org84ce3b0}
+\label{sec:orgb080b36}
 \chapter{Summary of topics}
-\label{sec:orgb8672d4}
+\label{sec:org1261526}
 \begin{itemize}
 \item You can run algorithms to study their properties
 \item You can put them to good use immediately in applications
@@ -79,9 +79,9 @@ public static squrt(double c)
 \item External Libraries: imported statements (ex: \texttt{java.lang.*})
 \end{itemize}
 \section{Subheading}
-\label{sec:org8619355}
+\label{sec:org982c4a8}
 \chapter{Data Abstraction}
-\label{sec:orgc82e023}
+\label{sec:org000dfb1}
 \begin{itemize}
 \item Abstract data type: data type whose representation is hidden from the client
 \item Abstract data types are important because they support encapsulation.
@@ -137,7 +137,7 @@ because it specifies what the algorithms need to accomplish and how the client
 can make use of it
 \end{itemize}
 \chapter{Bags, Queues, and Stacks}
-\label{sec:org56a5a2c}
+\label{sec:org1671d50}
 \begin{itemize}
 \item several fundemental data types involve collection of objects
 \item bag queu and stack are essiential in unfersanding algorithums
@@ -271,22 +271,44 @@ first = first.next;
 \begin{itemize}
 \item this assing the first value to the value that comes after it
 elimating the original value
+\item To insert at the end all you have to do is esablish a link to the last node
+in the list.
 
-\item 
-\end{itemize}
-\end{itemize}
-\end{itemize}
+\item Stack implementation basics:
 
+\item Here is what you can do
+
+\item Here is how:
+\begin{minted}[]{java}
+Node oldlast = last;
+last = new Node();
+last.item = "not";
+oldlast.next = last;
+
+\end{minted}
+\item two ways to rpresnt collection of objects are arrays and linked lists
+Arrays are built into java, linked lists are easy to build with sandard java
+records
+\item linked lists are the fundemental alternative to arrays when structureing data
+
+\item To loop through a list you would do this:
+\begin{minted}[]{java}
+for(Node x=first; x != null; x = x.next){ // Process x.item}
+
+\end{minted}
+\end{itemize}
+\end{itemize}
+\end{itemize}
 
 \chapter{Analysis of Algorithms}
-\label{sec:org6f57a63}
+\label{sec:orgb80f96b}
 \chapter{Case Study: Union-Find}
-\label{sec:orgcca48c4}
+\label{sec:orgd78d9ee}
 
 \part{Sorting}
-\label{sec:org20f5176}
+\label{sec:orgf9403a1}
 \chapter{Elementary Sorts}
-\label{sec:orga58cf79}
+\label{sec:org87970d7}
 \chapter{Merge Sort}
-\label{sec:org148d76a}
+\label{sec:org8abed76}
 \end{document}

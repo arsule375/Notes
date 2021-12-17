@@ -1,4 +1,4 @@
-% Created 2021-12-16 Thu 23:41
+% Created 2021-12-17 Fri 01:28
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{report}
 \usepackage[utf8]{inputenc}
@@ -32,9 +32,9 @@
 
 
 \part{Fundamentals}
-\label{sec:orgb080b36}
+\label{sec:org3840a0c}
 \chapter{Summary of topics}
-\label{sec:org1261526}
+\label{sec:org9a76d76}
 \begin{itemize}
 \item You can run algorithms to study their properties
 \item You can put them to good use immediately in applications
@@ -79,9 +79,9 @@ public static squrt(double c)
 \item External Libraries: imported statements (ex: \texttt{java.lang.*})
 \end{itemize}
 \section{Subheading}
-\label{sec:org982c4a8}
+\label{sec:orgbb6a7a1}
 \chapter{Data Abstraction}
-\label{sec:org000dfb1}
+\label{sec:org61e8f63}
 \begin{itemize}
 \item Abstract data type: data type whose representation is hidden from the client
 \item Abstract data types are important because they support encapsulation.
@@ -137,7 +137,7 @@ because it specifies what the algorithms need to accomplish and how the client
 can make use of it
 \end{itemize}
 \chapter{Bags, Queues, and Stacks}
-\label{sec:org1671d50}
+\label{sec:org7fcfa28}
 \begin{itemize}
 \item several fundemental data types involve collection of objects
 \item bag queu and stack are essiential in unfersanding algorithums
@@ -274,8 +274,96 @@ elimating the original value
 \item To insert at the end all you have to do is esablish a link to the last node
 in the list.
 
-\item Stack implementation basics:
+\item Stack, Queue, and Bag implentations for linked lists:
+\end{itemize}
+\end{itemize}
+\end{itemize}
 
+
+\begin{itemize}
+\item Queue implementation basics:
+push \& pop: ( add at the begining)
+\begin{minted}[]{java}
+public void enquene(Item item){
+
+   // adds item to end of the list
+   Node oldlast = last;
+   last = new Node();
+   last.item = item;
+   // next element after last is set to null
+   last.next = null;
+   // is empty checks if frist element is empty 
+   if(isEmpty()){
+
+   // sets frist equal to last 
+
+   first = last
+
+
+   }else{
+     // next value after oldlast is set to last 
+     oldlast.next = last
+
+   }
+
+
+ public Item pop()
+{
+
+ // merges with item before it 
+ Item item = first.item;
+ first = first.next;
+ N--;
+ if(is.Empty()) last = null;
+ return item;
+}
+
+
+
+}
+
+\end{minted}
+
+\begin{itemize}
+\item Stack implementation basics:
+push: (add item to the top of the stack)
+
+\begin{minted}[]{java}
+
+
+ public void push(Item item){
+
+ Node oldFirst = first;
+ first = new Node();
+ // sets the old note equal to an item
+ first.item = item;
+ // sets nextNode equal to oldnote
+ first.next = oldfirst;
+
+
+}
+\end{minted}
+\end{itemize}
+
+\item pop:( remove from the top of the stack)
+\end{itemize}
+
+
+\begin{minted}[]{java}
+public Item pop()
+{
+  Item item = first.item;
+  // sets the current first equal to the next item 
+  first = first.next;
+  N--;
+  return item
+}
+\end{minted}
+
+
+
+
+\begin{itemize}
 \item Here is what you can do
 
 \item Here is how:
@@ -286,6 +374,8 @@ last.item = "not";
 oldlast.next = last;
 
 \end{minted}
+\end{itemize}
+\begin{itemize}
 \item two ways to rpresnt collection of objects are arrays and linked lists
 Arrays are built into java, linked lists are easy to build with sandard java
 records
@@ -297,18 +387,16 @@ for(Node x=first; x != null; x = x.next){ // Process x.item}
 
 \end{minted}
 \end{itemize}
-\end{itemize}
-\end{itemize}
 
 \chapter{Analysis of Algorithms}
-\label{sec:orgb80f96b}
+\label{sec:orgacd7f28}
 \chapter{Case Study: Union-Find}
-\label{sec:orgd78d9ee}
+\label{sec:org8329f7d}
 
 \part{Sorting}
-\label{sec:orgf9403a1}
+\label{sec:org73a5e52}
 \chapter{Elementary Sorts}
-\label{sec:org87970d7}
+\label{sec:org3456c0a}
 \chapter{Merge Sort}
-\label{sec:org8abed76}
+\label{sec:org810d109}
 \end{document}

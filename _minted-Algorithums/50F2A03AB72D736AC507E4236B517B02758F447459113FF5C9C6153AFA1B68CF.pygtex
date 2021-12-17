@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public} \PYG{n}{Item} \PYG{n+nf}{pop}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+  \PYG{n}{Item} \PYG{n}{item} \PYG{o}{=} \PYG{n}{first}\PYG{p}{.}\PYG{n+na}{item}\PYG{p}{;}
+  \PYG{c+c1}{// sets the current first equal to the next item}
+  \PYG{n}{first} \PYG{o}{=} \PYG{n}{first}\PYG{p}{.}\PYG{n+na}{next}\PYG{p}{;}
+  \PYG{n}{N}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}
+  \PYG{k}{return} \PYG{n}{item}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
