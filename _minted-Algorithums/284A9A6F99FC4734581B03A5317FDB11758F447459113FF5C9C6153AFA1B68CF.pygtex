@@ -1,0 +1,39 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{enquene}\PYG{p}{(}\PYG{n}{Item} \PYG{n}{item}\PYG{p}{)\PYGZob{}}
+
+   \PYG{c+c1}{// adds item to end of the list}
+   \PYG{n}{Node} \PYG{n}{oldlast} \PYG{o}{=} \PYG{n}{last}\PYG{p}{;}
+   \PYG{n}{last} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Node}\PYG{p}{();}
+   \PYG{n}{last}\PYG{p}{.}\PYG{n+na}{item} \PYG{o}{=} \PYG{n}{item}\PYG{p}{;}
+   \PYG{c+c1}{// next element after last is set to null}
+   \PYG{n}{last}\PYG{p}{.}\PYG{n+na}{next} \PYG{o}{=} \PYG{k+kc}{null}\PYG{p}{;}
+   \PYG{c+c1}{// is empty checks if frist element is empty}
+   \PYG{k}{if}\PYG{p}{(}\PYG{n}{isEmpty}\PYG{p}{())\PYGZob{}}
+
+   \PYG{c+c1}{// sets frist equal to last}
+
+   \PYG{n}{first} \PYG{o}{=} \PYG{n}{last}
+
+
+   \PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{p}{\PYGZob{}}
+     \PYG{c+c1}{// next value after oldlast is set to last}
+     \PYG{n}{oldlast}\PYG{p}{.}\PYG{n+na}{next} \PYG{o}{=} \PYG{n}{last}
+
+   \PYG{p}{\PYGZcb{}}
+
+
+ \PYG{k+kd}{public} \PYG{n}{Item} \PYG{n+nf}{dequene}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+
+ \PYG{c+c1}{// merges with item before it}
+ \PYG{n}{Item} \PYG{n}{item} \PYG{o}{=} \PYG{n}{first}\PYG{p}{.}\PYG{n+na}{item}\PYG{p}{;}
+ \PYG{n}{first} \PYG{o}{=} \PYG{n}{first}\PYG{p}{.}\PYG{n+na}{next}\PYG{p}{;}
+ \PYG{n}{N}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}
+ \PYG{k}{if}\PYG{p}{(}\PYG{n}{is}\PYG{p}{.}\PYG{n+na}{Empty}\PYG{p}{())} \PYG{n}{last} \PYG{o}{=} \PYG{k+kc}{null}\PYG{p}{;}
+ \PYG{k}{return} \PYG{n}{item}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+
+
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

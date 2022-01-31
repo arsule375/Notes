@@ -1,0 +1,11 @@
+#+TITLE: Eng102
+#+OPTIONS: toc:nil
+
+* lecture 1
+
+** freewrite
+   - One dream that I have is to be very sucessful and heathy.
+     A few goals that I have this year is to eat heathier, get in shape,
+     read more, and learn more about CS.
+   - 
+   - 

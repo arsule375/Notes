@@ -1,0 +1,75 @@
+% Created 2021-12-24 Fri 14:07
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\author{Atharv Sule}
+\date{\today}
+\title{Investing lecture series}
+\hypersetup{
+ pdfauthor={Atharv Sule},
+ pdftitle={Investing lecture series},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.2 (Org mode 9.4.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\section{}
+\label{sec:org56dbdf1}
+\section{}
+\label{sec:org22d697e}
+\section{Part 3: How to think about Investing}
+\label{sec:orgb504a61}
+\subsection{What foundations do we need before investing our hard-earned money?}
+\label{sec:org1515c69}
+\begin{itemize}
+\item Try not to get yourelf into  any of the following dept:
+\begin{itemize}
+\item Morage dept( you must be able to afford morgage)
+\item Student Dept( Try to aviod if you can, most curcumstantual)
+\item Credit dept ( dont spend reclessly)
+\end{itemize}
+\item Set up an emergancy fund
+\begin{itemize}
+\item Most people live paycheck to paycheck, but you must prepare of the scenaro of no paycheck
+\item money can cover your expences in case of emergancy
+\end{itemize}
+\end{itemize}
+\subsection{Should we worry about inflation or deflation?}
+\label{sec:orga541787}
+-why not keep the excess chash under you bed?
+\begin{itemize}
+\item Due to inflation the value of money will steadily decrease
+\item EX: The price of a tall mocha went up 2.4x in 16 years
+\item EX: Rent for 1 bedroom apartment is up 2.8x in 16 years
+\item The examples above are examples of inflation
+\item The moneys purcasing power got reduced
+\end{itemize}
+\begin{itemize}
+\item 
+
+\item 
+
+\item why not keep the excess chash under you bed?
+\end{itemize}
+
+
+\section{}
+\label{sec:orgc0da7bd}
+\section{}
+\label{sec:orgf5d6864}
+\end{document}

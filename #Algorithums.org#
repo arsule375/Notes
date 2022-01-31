@@ -250,7 +250,7 @@ public class Evaluate {
 	      }
 
 
-	    public Item pop()
+	    public Item dequene()
 	   {
 
 	    // merges with item before it 
@@ -324,7 +324,41 @@ public class Evaluate {
 
 	 #+end_src
 
+       - Pracite examples:
+
+	 #+begin_src java
+	   isFull(a.length != N){
+	       return false;
+	   }
+            return true;
+	 #+end_src
+	 -was best times of the was it  (- most recent element
+
+	 - None of the above
+
+       - (num 5) the problem prints 110010 the bianry represntation of N
+
+	 - While there is a first element in queue it pops thr frist element
+	   and pushes it into stack and vice verse
+
+	 - 8 ans: cont 'it', size:9
+
+	 - 13 ans: bcd
+
+	 - 18: deletes the node net next
+
+	 - 22: the code will insert t after x
+
+	 - 23: the node after t is x itself
+
 ** Analysis of Algorithms
+   - Questions: "How long will the run time be"
+   - The larger the problem and input  the larger the run time
+   - you can use the stopwatech class to determine the time
+     =Stopwatch timer = new Stopwatch()=, =time = timer.elapedTime()=
+   - The run time is determined by two factors: cost of execulting each statment,
+     and fequency of execution of each stament
+     
 ** Case Study: Union-Find
 
 * Sorting

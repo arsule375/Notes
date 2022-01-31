@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{isFull}\PYG{p}{(}\PYG{n}{a}\PYG{p}{.}\PYG{n+na}{length} \PYG{o}{!=} \PYG{n}{N}\PYG{p}{)\PYGZob{}}
+    \PYG{k}{return} \PYG{k+kc}{false}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+ \PYG{k}{return} \PYG{k+kc}{true}\PYG{p}{;}
+\end{Verbatim}

@@ -1,0 +1,100 @@
+
+#+TITLE: A Demonstration of Org-Mode
+#+OPTIONS: toc:nil
+
+# This won't show up in the PDF: it's a comment
+
+* This is a Toplevel Heading
+
+Here's: *bold* /italics/ _underline_ =code=.
+
+** Subheading
+
+Numbered list:
+1. First item.
+2. Second item.
+   1. Sublist
+   2. Sublist item 2
+      1. Subsublist
+3. Some more items...
+
+Bulleted list:
+- Bullet 1
+- Bullet 2
+  - Subbullet
+  - Etc.
+
+Some text here.
+
+#+LATEX: \newpage
+
+* Another Toplevel Heading
+Let's do some more advanced stuff.
+
+** Code Blocks
+#+begin_src python :results output :exports both :eval no-export
+print "Hello world"
+#+end_src
+
+#+RESULTS:
+: Hello world
+
+Here's some Java:
+
+#+begin_src java :exports both :eval no-export
+// Your First Program
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+    }
+}
+#+end_src
+
+#+RESULTS:
+: Hello world!
+
+#+begin_src cpp :exports both :eval no-export
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+  printf("Hello world!");
+  return 0;
+}
+#+end_src
+
+#+RESULTS:
+: Hello world!
+
+#+begin_src emacs-lisp :exports both :eval no-export
+(princ "Hello world")
+#+end_src
+
+#+RESULTS:
+: Hello world
+
+** Tables
+
+| Name   | Ice Cream  |
+|--------+------------|
+| Aditya | Vanilla    |
+| Atharv | Vanilla    |
+| Rahul  | Strawberry |
+| Vijay  | None       |
+
+* Basic Emacs
+
+- =C-x C-f=: open a file (old or new doesn't matter)
+- =C-x C-c=: exit Emacs (will ask for confimation, type "y")
+- =C-x C-s=: save file
+- =M-x org-latex-export-to-pdf=: generate PDF output for Org file.
+
+* Mathematics
+
+Hyperlinks: [[https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference][refer here for how to type mathematics in Org mode]].
+
+Example:
+$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
+
+* Org Mode manual
+[[https://orgmode.org/manual/][Click here.]]
+
